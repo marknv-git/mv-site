@@ -195,6 +195,7 @@ a.btn[style*="padding: 18px 26px"]{width:100%;box-sizing:border-box;justify-cont
 #where .g4 button{min-height:76px!important;padding:14px 14px!important;gap:10px!important}
 @media (max-width:980px){.ft{display:grid!important;grid-template-columns:1fr auto;align-items:center!important;gap:22px 16px!important;padding:32px 20px 38px!important}.ft>span:first-child{order:1}.ft .fta{order:2}.ft .fth{order:3;grid-column:1/-1;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}}
 .macc{display:none!important}
+
 @media (max-width:980px){#where .g4{grid-template-columns:minmax(0,1fr)!important}#where .g4 button{padding:12px 16px!important;gap:14px!important;font-size:17px!important;min-height:68px!important}#where .g4 button>span:first-child{width:42px!important;height:42px!important;border-radius:11px!important}#where .g4 button>span:first-child svg{width:27px;height:27px}#where .g3{grid-template-columns:minmax(0,1fr)!important;margin-top:10px!important}#where .g3>div{position:relative;padding:20px!important}#where .g3>div:not(:last-child)::after{content:"";position:absolute;left:25px;top:28px;bottom:-28px;width:4px;border-radius:2px;background:#35C2F0;z-index:0}#where .g3>div>div:first-child>*:first-child{position:relative;z-index:1}#where .g3>div>div:last-child{padding-left:30px}#where .g3>div:last-child>div:first-child>svg{margin-left:-4px}}
 #where .g4{align-items:stretch!important;gap:8px!important}#where .g4 button{border-radius:14px!important;border-bottom:1px solid rgba(255,255,255,.14)!important}#where .g4 button[aria-checked=true]{border-bottom:1px solid rgba(255,255,255,.26)!important}#where .g3{border-radius:14px!important;margin-top:12px}
 @media (max-width:980px){.ps{display:flex!important;gap:18px;align-items:flex-start;padding-top:22px!important}.ps .pn{font-size:48px!important;margin-bottom:0!important;flex:0 0 52px;min-width:52px}.ps .pt{flex:1 1 auto;min-width:0;padding-top:4px}.ps .pt h3{font-size:21px!important}.ps .pt p{font-size:16px!important;line-height:1.5}#proc{gap:28px!important}}
@@ -206,6 +207,7 @@ a.btn[style*="padding: 18px 26px"]{width:100%;box-sizing:border-box;justify-cont
 @keyframes htw{0%,100%{opacity:.18}50%{opacity:1}}
 .hr{animation:htw 4.8s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.hr{animation:none!important;opacity:.8}}
+@media (min-width:981px){.stk{display:none!important}}@media (max-width:980px){.dskh{display:none!important}}
 </style>
 </helmet>
 <div style="width: 100%; background: radial-gradient(ellipse 60% 6% at 88% 4%, rgba(53,194,240,.13), transparent 70%), radial-gradient(ellipse 55% 5% at 6% 18%, rgba(18,98,143,.22), transparent 70%), radial-gradient(ellipse 55% 6% at 94% 42%, rgba(53,194,240,.10), transparent 70%), radial-gradient(ellipse 60% 6% at 8% 66%, rgba(18,98,143,.22), transparent 70%), radial-gradient(ellipse 60% 6% at 90% 84%, rgba(53,194,240,.10), transparent 70%), #0A0C0F; color: #EEF1F4; font-family: 'IBM Plex Sans','Helvetica Neue',Arial,sans-serif; font-size: 18px; line-height: 1.6; overflow: clip">
@@ -380,6 +382,25 @@ a.btn[style*="padding: 18px 26px"]{width:100%;box-sizing:border-box;justify-cont
 <div class="rv" style="display: flex; align-items: center; gap: 12px; margin: 0 0 16px 0; font-size: 14px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: #FF2E93"><span aria-hidden="true" style="display: block; width: 32px; height: 3px; background: #FF2E93"></span>How I Help</div>
 <h2 class="rv" style="margin: 0 0 24px 0; max-width: 30ch; font-family: 'Sora','Helvetica Neue',Arial,sans-serif; font-weight: 800; font-size: clamp(36px, 4.2vw, 56px); line-height: 1.04; letter-spacing: -0.045em">I start where your company actually is, and go only as far as you need.</h2>
 <div class="note" aria-hidden="true" style="margin: 0 0 2px 110px; padding: 8px 16px 0 12px; color: #FF2E93; font-family: 'Caveat','Segoe Script','Bradley Hand',cursive; font-weight: 500; font-size: 27px; line-height: 1.05; transform: rotate(-3deg); display: inline-flex; align-items: flex-start; gap: 6px"><svg width="30" height="56" viewBox="-8 -8 30 60" style="overflow: visible; flex: 0 0 auto" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 2 C 4 14 16 28 10 40"/><path pathLength="1" d="M3.5 30 L10 41 L17 30.5"/></svg><span class="wt">All projects start here</span></div>
+<div class="dskh">
+<div aria-hidden="true" style="position: relative; height: 0"><div class="ramp" style="position: absolute; left: -40px; right: -40px; top: 0; height: 520px; pointer-events: none"></div></div>
+<div class="g4 stg" style="position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; padding-top: 66px">
+<sc-for list="{{stages}}" as="s" hint-placeholder-count="4">
+<div class="cs" style="position: relative"><div class="chev" style="position: relative; z-index: {{s.z}}; box-sizing: border-box; width: {{s.cw}}; margin-left: {{s.ml}}; height: 68px; display: flex; align-items: center; justify-content: center; padding: 0 30px; background: {{s.cbg}}; clip-path: {{s.clip}}; color: #04141C; font-family: 'Sora','Helvetica Neue',Arial,sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em; white-space: nowrap">{{s.pill}}</div></div>
+</sc-for>
+</div>
+<div class="g4 stg cd" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; margin-bottom: 66px">
+<sc-for list="{{stages}}" as="s" hint-placeholder-count="4">
+<div style="position: relative; background: #14181D; border: 1px solid #35C2F0; border-top: 0; border-radius: 0 0 14px 14px; padding: 30px 26px; box-shadow: 0 0 32px rgba(53,194,240,.22), 0 28px 40px -14px rgba(0,0,0,.75); transition: transform .2s ease-out">
+<h3 style="margin: 0 0 10px 0; font-family: 'Sora','Helvetica Neue',Arial,sans-serif; font-weight: 600; font-size: 21px; line-height: 1.2; letter-spacing: -0.02em">{{s.title}}</h3>
+<p style="margin: 0 0 18px 0; font-size: 16.5px; color: #EEF1F4">{{s.tag}}</p>
+<sc-for list="{{s.chips}}" as="ch" hint-placeholder-count="4">
+<div style="display: flex; gap: 12px; align-items: baseline; padding: 10px 0 10px 4px; border-top: 1px solid rgba(255,255,255,.1); font-size: 16px; line-height: 1.45; color: #A0AAB4"><span aria-hidden="true" style="flex: 0 0 auto; width: 5px; height: 5px; border-radius: 50%; background: #35C2F0; transform: translateY(-2px)"></span><span style="min-width: 0">{{ch.t}}</span></div>
+</sc-for>
+</div>
+</sc-for>
+</div>
+</div>
 <div class="stk" style="display: grid; grid-template-columns: minmax(0,1fr); gap: 10px; padding-top: 6px; margin-bottom: 32px">
 <sc-for list="{{stages}}" as="s" hint-placeholder-count="4">
 <div>
